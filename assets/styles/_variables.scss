@@ -1,0 +1,53 @@
+// assets/styles/variables.scss
+:root {
+  // Colors
+  --primary-color: #23a6f0;
+  --secondary-color: #6c757d;
+  --success-color: #40cd7d;
+  --info-color: #2c82e0;
+  --warning-color: #ffb547;
+  --danger-color: #e42222;
+
+  // Typography
+  --font-family: "Source Sans Pro", sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+
+  // Spacing
+  --spacing-base: 1rem;
+  --container-max-width: 1200px;
+
+  /* Checkbox specific variables */
+  --va-checkbox-size: 18px;
+  --va-checkbox-border-radius: 4px;
+  --va-checkbox-border-width: 2px;
+  
+  /* General theme variables */
+  --va-primary: #23A6F0;
+  --va-text-primary: #2C3E50;
+  --va-background-primary: #FFFFFF;
+}
+
+
+/* Global checkbox styles if needed */
+.va-checkbox {
+  &__input {
+    transition: all 0.3s ease;
+    
+    &--checked {
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+      }
+    }
+  }
+}

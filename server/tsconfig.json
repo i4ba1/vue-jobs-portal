@@ -1,0 +1,83 @@
+{
+  // Extend Nuxt's default TypeScript configuration
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    // Language and Environment
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    
+    // Modules
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "types": [
+      "@vuestic/nuxt",
+      "vuestic-ui",
+      "@pinia/nuxt",
+      "@nuxt/types",
+      "@types/node",
+      "@nuxtjs/i18n",
+      "vite/client",
+      "node"
+    ],
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+
+    // JavaScript Support
+    "allowJs": true,
+    "checkJs": true,
+
+    // Type Checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+
+    // Editor Support
+    "skipLibCheck": true,
+    "incremental": true,
+    
+    // Interop Constraints
+    "esModuleInterop": true,
+    "preserveValueImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    // Language and Environment
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.vue",
+    "./**/*.json",
+    ".nuxt/nuxt.d.ts",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".output",
+    ".nuxt"
+  ]
+}
